@@ -1,0 +1,37 @@
+<!--index.wxml-->
+
+<!-- <view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px">
+<view ></view>
+</view> -->
+<image class="topImage" src="../static/head.jpg" mode='widthFix'></image>
+<view class="container">
+  <view class="QImage">
+    <image class="qImage" src="../static/Q.jpg" mode='widthFix'></image>
+  </view>
+  <view class="currentText">
+    <view class="nameInput">
+      <input type="text" maxlength="-1" bindconfirm="textareaAInput" bindblur="textareaAInput" placeholder="输入垃圾名字" value="{{currentText}}" onfirm-type="done"></input>
+    </view>
+  </view>
+  <view class="AImage">
+    <image class="aImage" src="../static/A.jpg" mode='widthFix'></image>
+  </view>
+  <view class="typeText">
+    <view style="height:30px;margin:10px">
+      <text class="Ttext">{{typeText}}</text>
+    </view>
+    <view>
+      <image wx:if="{{data == '可回收垃圾'}}" class="typeImage" src="../static/pic2.png" mode='widthFix'></image>
+      <image wx:elif="{{data == '干垃圾'}}" class="typeImage" src="../static/pic5.png" mode='widthFix'></image>
+      <image wx:elif="{{data == '湿垃圾'}}" class="typeImage" src="../static/pic3.png" mode='widthFix'></image>
+      <image wx:elif="{{data == '有害垃圾'}}" class="typeImage" src="../static/pic4.png" mode='widthFix'></image>
+      <image wx:else class="typeImage" src="" mode='widthFix'></image>  
+    </view>
+  </view>
+  <view>
+    <view>
+      <image class="listenBtn" catchtouchstart="streamRecord" catchtouchend="endStreamRecord" src="../static/mkf.png" mode='widthFix' style="background-color:{{score}};box-shadow:{{shadow}}"></image>
+    </view>
+    <text class="btnText">请长按图标进行语音识别</text>
+  </view>
+</view>
